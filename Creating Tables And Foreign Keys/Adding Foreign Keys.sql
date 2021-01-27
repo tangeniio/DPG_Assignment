@@ -1,93 +1,111 @@
-CREATE TABLE Person (
-    ID_Number int PRIMARY KEY,
-    Full_Name varchar(255),
-    Email varchar(255),
-	Cell_No int,
-	Date_Of_Birth date,
-    Physical_Address varchar(255)
-);
+ALTER TABLE Person /**/
+ADD CONSTRAINT FK_Physicall_Address
+FOREIGN KEY (Physical_Address) REFERENCES Residence(Physical_Address)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE Attendee (
-    Attendee_ID int PRIMARY KEY,
-    Business_Reg_No varchar(255),
-	Notification_No int,
-	Business_Owner varchar (255)
-);
+ALTER TABLE SystemAdmin /**/
+ADD CONSTRAINT FK_ID_Number
+FOREIGN KEY (ID_Number) REFERENCES Person(ID_Number)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
+ALTER TABLE Attendee /**/
+ADD CONSTRAINT FK_Business_Reg_No
+FOREIGN KEY (Business_Reg_No) REFERENCES BusinessInfo(Business_Reg_No)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE SystemAdmin (
-    Staff_ID int PRIMARY KEY,
-	ID_Number int
-);
+ALTER TABLE Attendee /**/
+ADD CONSTRAINT FK_Notification_No
+FOREIGN KEY (Notification_No) REFERENCES Notification_(Notification_No)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
+ALTER TABLE Registration /**/
+ADD CONSTRAINT FK_Attendee_ID
+FOREIGN KEY (Attendee_ID) REFERENCES Attendee(Attendee_ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE Residence (
-   Physical_Address varchar(255) PRIMARY KEY,
-   House_No varchar(255),
-   Suburb varchar(255),
-   Region varchar(255),
-);
+ALTER TABLE Event_ /**/
+ADD CONSTRAINT FK_Reg_ID
+FOREIGN KEY (Reg_ID) REFERENCES Registration(Reg_ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE BusinessInfo (
-    Business_Reg_No varchar(255) PRIMARY KEY,
-    Business_Name varchar (255),
-);
+ALTER TABLE Category /**/
+ADD CONSTRAINT FK_Event_ID
+FOREIGN KEY (Event_ID) REFERENCES Event_(Event_ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE Event_ (
-    Event_ID int PRIMARY KEY,
-    Event_Name varchar(255),
-    Event_Location varchar(255),
-	Event_Date date,
-    Event_Time time,
-	Reg_ID int
-);
+ALTER TABLE Authentication_ /**/
+ADD CONSTRAINT FK_Attendee_ID_2
+FOREIGN KEY (Attendee_ID) REFERENCES Attendee(Attendee_ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE Category (
-    Category_ID int PRIMARY KEY,
-    Category_Name varchar(255),
-    Event_ID int
-);
+ALTER TABLE Authentication_ /**/
+ADD CONSTRAINT FK_Staff_ID
+FOREIGN KEY (Staff_ID) REFERENCES SystemAdmin(Staff_ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE Registration (
-    Reg_ID int PRIMARY KEY,
-    Status_of_Reg varchar(255),
-    Attendee_ID int
-);
+ALTER TABLE Transaction_ /**/
+ADD CONSTRAINT FK_Payment_No
+FOREIGN KEY (Payment_No) REFERENCES Event_Payment(Payment_No)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE Authentication_ (
-    Auth_ID int PRIMARY KEY,
-    Auth_Password varchar(255),
-	Attendee_ID int,
-    Staff_ID int
-);
+ALTER TABLE Transaction_ /**/
+ADD CONSTRAINT FK_Bank_Card_Number
+FOREIGN KEY (Bank_Card_Number) REFERENCES Bank_Card(Bank_Card_Number)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE Transaction_ (
-    Transaction_ID int PRIMARY KEY,
-    Transaction_Name varchar(255),
-    Transaction_Status varchar(255),
-	Payment_No int,
-	Bank_Card_Number int
-);
+ALTER TABLE Bank_Card /**/
+ADD CONSTRAINT FK_Attendee_ID_3
+FOREIGN KEY (Attendee_ID) REFERENCES Attendee(Attendee_ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE Bank_Card (
-    Bank_Card_Number int PRIMARY KEY,
-    Cvv_Code int,
-    Attendee_ID int
-);
+ALTER TABLE Event_Payment /**/
+ADD CONSTRAINT FK_Event_ID_2
+FOREIGN KEY (Event_ID) REFERENCES Event_(Event_ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE Event_Payment (
-    Payment_No int PRIMARY KEY,
-    Payment_Amount varchar(255),
-    Event_ID int,
-	Bank_Card_Number int,
-	Attendee_ID int
-);
+ALTER TABLE Event_Payment /**/
+ADD CONSTRAINT FK_Bank_Card_Number_2
+FOREIGN KEY (Bank_Card_Number) REFERENCES Bank_Card(Bank_Card_Number)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-CREATE TABLE Notification_ (
-    Notification_No int PRIMARY KEY,
-    Notification_Msg varchar (255),
-    Staff_ID int,
-	Attendee_ID int
-);
+ALTER TABLE Event_Payment /**/
+ADD CONSTRAINT FK_Attendee_ID_4
+FOREIGN KEY (Attendee_ID) REFERENCES Attendee(Attendee_ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
-
+ALTER TABLE Notification_ /**/
+ADD CONSTRAINT FK_Staff_ID_2
+FOREIGN KEY (Staff_ID) REFERENCES SystemAdmin(Staff_ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
