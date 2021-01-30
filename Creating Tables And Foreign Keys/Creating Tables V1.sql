@@ -9,7 +9,7 @@ CREATE TABLE Person (
 
 CREATE TABLE Attendee (
     Attendee_ID int IDENTITY(2021,1) PRIMARY KEY,
-    Business_Reg_No varchar(255),
+    Business_Reg_No int,
 	Notification_No int,
 	Business_Owner varchar (255)
 );
