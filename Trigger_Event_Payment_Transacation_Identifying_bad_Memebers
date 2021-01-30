@@ -36,3 +36,4 @@ BEGIN
 	PRINT 'Please Pay Event Payment Amount it is NS500';
 	
 	END
+	GO
