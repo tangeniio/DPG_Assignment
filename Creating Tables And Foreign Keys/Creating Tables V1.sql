@@ -1,5 +1,5 @@
 CREATE TABLE Person (
-    ID_Number int PRIMARY KEY,
+    ID_Number int IDENTITY(1011,1) PRIMARY KEY,
     Full_Name varchar(255),
     Email varchar(255),
 	Cell_No int,
@@ -8,7 +8,7 @@ CREATE TABLE Person (
 );
 
 CREATE TABLE Attendee (
-    Attendee_ID int PRIMARY KEY,
+    Attendee_ID int IDENTITY(2021,1) PRIMARY KEY,
     Business_Reg_No varchar(255),
 	Notification_No int,
 	Business_Owner varchar (255)
@@ -16,7 +16,7 @@ CREATE TABLE Attendee (
 
 
 CREATE TABLE SystemAdmin (
-    Staff_ID int PRIMARY KEY,
+    Staff_ID int IDENTITY(3031,1) PRIMARY KEY,
 	ID_Number int
 );
 
@@ -29,12 +29,12 @@ CREATE TABLE Residence (
 );
 
 CREATE TABLE BusinessInfo (
-    Business_Reg_No varchar(255) PRIMARY KEY,
+    Business_Reg_No int IDENTITY(4041,1) PRIMARY KEY,
     Business_Name varchar (255),
 );
 
 CREATE TABLE Event_ (
-    Event_ID int PRIMARY KEY,
+    Event_ID int IDENTITY(5051,1) PRIMARY KEY,
     Event_Name varchar(255),
     Event_Location varchar(255),
 	Event_Date date,
@@ -43,26 +43,26 @@ CREATE TABLE Event_ (
 );
 
 CREATE TABLE Category (
-    Category_ID int PRIMARY KEY,
+    Category_ID int IDENTITY(6061,1) PRIMARY KEY,
     Category_Name varchar(255),
     Event_ID int
 );
 
 CREATE TABLE Registration (
-    Reg_ID int PRIMARY KEY,
+    Reg_ID int IDENTITY(7071,1) PRIMARY KEY,
     Status_of_Reg varchar(255),
     Attendee_ID int
 );
 
 CREATE TABLE Authentication_ (
-    Auth_ID int PRIMARY KEY,
+    Auth_ID int IDENTITY(8081,1) PRIMARY KEY,
     Auth_Password varchar(255),
 	Attendee_ID int,
     Staff_ID int
 );
 
 CREATE TABLE Transaction_ (
-    Transaction_ID int PRIMARY KEY,
+    Transaction_ID int IDENTITY(9091,1) PRIMARY KEY,
     Transaction_Name varchar(255),
     Transaction_Status varchar(255),
 	Payment_No int,
@@ -70,13 +70,13 @@ CREATE TABLE Transaction_ (
 );
 
 CREATE TABLE Bank_Card (
-    Bank_Card_Number int PRIMARY KEY,
+    Bank_Card_Number int IDENTITY(1001,1) PRIMARY KEY,
     Cvv_Code int,
     Attendee_ID int
 );
 
 CREATE TABLE Event_Payment (
-    Payment_No int PRIMARY KEY,
+    Payment_No int IDENTITY(2001,1) PRIMARY KEY,
     Payment_Amount varchar(255),
     Event_ID int,
 	Bank_Card_Number int,
@@ -84,10 +84,8 @@ CREATE TABLE Event_Payment (
 );
 
 CREATE TABLE Notification_ (
-    Notification_No int PRIMARY KEY,
+    Notification_No int IDENTITY(3001,1) PRIMARY KEY,
     Notification_Msg varchar (255),
     Staff_ID int,
 	Attendee_ID int
 );
-
-
