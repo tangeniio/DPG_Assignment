@@ -1,0 +1,56 @@
+CREATE PROCEDURE AddUpdateDeleteEvents (
+	@Event_ID int PRIMARY KEY,
+    @Event_Name varchar(255),
+    @Event_Location varchar(255),
+	@Event_Date date,
+    @Event_Time time,
+	@Reg_ID int,
+	@StatementType NVARCHAR(20) = '') 
+AS  
+  BEGIN  
+      IF @StatementType = 'Insert'  
+        BEGIN  
+            INSERT INTO Event_  (Event_ID,
+						Event_Name, 
+						Event_Location, 
+						Event_Date,
+						Event_Time,
+						Reg_ID
+						)  
+						
+            VALUES     (@Event_ID,
+						@Event_Name, 
+						@Event_Location, 
+						@Event_Date, 
+						@Event_Time,
+						@Reg_ID)
+        END  
+  
+      IF @StatementType = 'Select'  
+        BEGIN  
+            SELECT *  
+            FROM   Event_  
+        END  
+  
+      IF @StatementType = 'Update'  
+        BEGIN  
+            UPDATE Event_  
+            SET  Event_ID= @Event_ID,
+				 Event_Name = @Event_Name, 
+				 Event_Location = @Event_Location, 
+				 Event_Date = @Event_Date,
+				 Event_Time = @Event_Time,
+				 Reg_ID = @Reg_ID, 
+				 
+            WHERE  Event_ID = @Event_ID  
+        END  
+		
+      ELSE IF @StatementType = 'Delete'  
+        BEGIN  
+            DELETE FROM Event_  
+            WHERE  Event_ID = @Event_ID
+        END  
+  END   
+  
+
+*ALTER THIS  PROCEDURE TO ADD PERMSSIO FOR ATTENDES TO VIEW, SELECT ADDED EVENTS
