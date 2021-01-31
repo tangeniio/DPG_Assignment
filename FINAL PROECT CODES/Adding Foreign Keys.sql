@@ -90,4 +90,16 @@ CREATE TABLE Notification_ (
 	Attendee_ID int
 );
 
+ALTER TABLE SystemAdmin /**/
+ADD CONSTRAINT FK_Auth_Password
+FOREIGN KEY (Auth_Password) REFERENCES Authentication_(Auth_Password)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
 
+ALTER TABLE Attendee /**/
+ADD CONSTRAINT FK_Auth_Password_2
+FOREIGN KEY (Auth_Password) REFERENCES Authentication_(Auth_Password)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
