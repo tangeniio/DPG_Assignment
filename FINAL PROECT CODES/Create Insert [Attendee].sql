@@ -1,5 +1,5 @@
 CREATE PROCEDURE AddUpdateDeleteAttendee /**/(
-    	@attendee_ID int IDENTITY(2021,1) PRIMARY KEY,
+    	@attendee_ID int,
 		@business_Reg_No int,
 		@notification_No int,
 	    @auth_Password varchar(255),
