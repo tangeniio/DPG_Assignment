@@ -1,20 +1,20 @@
 CREATE PROCEDURE AddUpdateDeleteSystemAdmin /**/ (
-	Staff_ID int,
-	Auth_Password varchar(255),
-	ID_Number int
+	@staff_id int,
+	@auth_password varchar(255),
+	@id_number int
 		) 
 AS  
   BEGIN  
       IF @statementtype = 'Insert'  
         BEGIN  
             INSERT INTO SystemAdmin(
-				Staff_ID,
 				Auth_Password,
 				ID_Number
 				)
 						
-            VALUES     (Auth_Password varchar(255),
-						ID_Number int)
+            VALUES     (
+		    	@auth_password,
+			@id_number int)
         END  
   
       IF @Statementtype = 'Select'  
@@ -26,9 +26,9 @@ AS
       IF @Statementtype = 'Update'  
         BEGIN  
             UPDATE SytemAdmin 
-            SET  Staff_ID = @staff_ID,
-				Auth_Password =@auth_Password,
-				ID_Number = @id_Number
+            SET  Staff_ID = @staff_id,
+		 Auth_Password = @auth_password,
+		 ID_Number = @id_Number
 				 
             WHERE  Staff_ID = @staff_id
         END  
