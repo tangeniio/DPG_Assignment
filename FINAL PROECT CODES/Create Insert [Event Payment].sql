@@ -1,5 +1,5 @@
 CREATE PROCEDURE AddUpdateDeleteEventPayment /**/(
-    	@payment_no int,
+    		@payment_no int,
 		@payment_amount varchar(255),
 		@event_id int,
 		@bank_card_number int,
@@ -11,15 +11,11 @@ AS
         BEGIN  
             INSERT INTO Event_Payment (
 			Payment_Amount,
-			Event_ID,
-			Bank_Card_Number,
-			Attendee_ID)
+			Bank_Card_Number)
 						
             VALUES     (
 			@payment_amount,
-			@event_ID,
-			@bank_card_number,
-			@attendee_id)
+			@bank_card_number)
 
         END  
   
@@ -33,10 +29,7 @@ AS
         BEGIN  
             UPDATE Event_Payment  
             SET Payment_Amount= @payment_amount,
-				Event_ID = @event_id,
 				Bank_Card_Number = @bank_card_number,
-				Attendee_ID = @attendee_id)
-
 				 
             WHERE Payment_No = @payment_no  
         END  
