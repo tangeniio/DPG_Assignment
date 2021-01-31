@@ -22,18 +22,18 @@ BEGIN
 	SELECT @Payment_Amount = Event_Payment.Payment_Amount from inserted Event_Payment;
 	
 
-	IF @Payment_Amount < 500
-	PRINT 'Event Payment Amount is NS500 you have not paid the full amount';
+        IF @Payment_Amount < 500
+	PRINT 'Event Payment Amount is NS500 you have not paid the full amount //You Are A Bad Member';
 
 	ELSE IF @Payment_Amount > 500
-	PRINT 'Event Payment Amount is NS500 you have paid Over the full amount';
+	PRINT 'Event Payment Amount is NS500 you have paid Over the full amount//You Are A Good Member';
 
 	
 	ELSE IF @Payment_Amount = 0
-	PRINT 'Please Pay Event Payment Amount it is NS500';
+	PRINT 'Please Pay Event Payment Amount it is NS500 //You Are A Bad Member';
 
 	ELSE 
-	PRINT 'Please Pay Event Payment Amount it is NS500';
+	PRINT 'Please Pay Event Payment Amount it is NS500 //You Are A Bad Member';
 	
 	END
 	GO
