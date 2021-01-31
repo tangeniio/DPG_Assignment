@@ -1,0 +1,43 @@
+CREATE PROCEDURE AuthenticateUser(
+	@Auth_ID INT,
+	@Auth_Password VARCHAR(255),
+	@Staff_ID INT,
+	@Attendee_ID INT,
+	@Role VARCHAR(25) OUTPUT
+	@StatementType NVARCHAR(20) = '') 
+)
+
+AS
+	SET NOCOUNT ON
+
+BEGIN 	DECLARE @Username INT,
+		DECLARE @Password VARCHAR(255),
+		
+		BEGIN
+			SELECT @Auth_ID =@Username, @Auth_Password =@Password 
+					FROM Authentication
+		
+			INSERT INTO Authentication(Auth_ID INT,
+					Auth_Password VARCHAR(255)
+					
+            VALUES     (@Auth_ID INT,
+					@Auth_Password VARCHAR(255)
+		END
+					
+		IF(@Auth_ID = @Username COLLATE 250A)
+			BEGIN
+				SET @Role = "INCORRECT UserID"	
+			END
+		
+		ELSE(@Auth_ID =@Password COLLATE 250A)
+			BEGIN
+				SET @Role = "INCORRECT PASSWORD"
+			END
+			
+		ELSE 
+			BEGIN 
+				SET @Role = "LOGGED IN SUCCESSFULLY"
+			END
+			
+	SELECT @Role
+END
