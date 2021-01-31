@@ -10,26 +10,25 @@ CREATE PROCEDURE AuthenticateUser(
 AS
 	SET NOCOUNT ON
 
-BEGIN 	DECLARE @Username INT,
-		DECLARE @Password VARCHAR(255),
+BEGIN 	DECLARE @Auth_ID INT,
+		DECLARE @Auth_Password VARCHAR(255),
 		
 		BEGIN
-			SELECT @Auth_ID =@Username, @Auth_Password =@Password 
+			SELECT @Auth_ID =@Auth_ID, @Auth_Password = @Auth_Password 
 					FROM Authentication
 		
 			INSERT INTO Authentication(Auth_ID INT,
 					Auth_Password VARCHAR(255)
 					
-            VALUES     (@Auth_ID INT,
-					@Auth_Password VARCHAR(255)
+            		VALUES     (@Auth_ID INT, @Auth_Password VARCHAR(255)
 		END
 					
-		IF(@Auth_ID = @Username COLLATE 250A)
+		IF(@Auth_ID = @Auth_ID COLLATE 250A)
 			BEGIN
 				SET @Role = "INCORRECT UserID"	
 			END
 		
-		ELSE(@Auth_ID =@Password COLLATE 250A)
+		ELSE(@Auth_ID =@Auth_ID COLLATE 250A)
 			BEGIN
 				SET @Role = "INCORRECT PASSWORD"
 			END
