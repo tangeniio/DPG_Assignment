@@ -3,8 +3,7 @@ CREATE PROCEDURE AddUpdateDeleteResidence/**/ (
 		@house_No varchar(255),
 		@suburb varchar(255),
 		@region varchar(255)
-		@statementtype = ''
-		) 
+		@statementtype NVARCHAR(20) = '')
 AS  
   BEGIN  
       IF @statementtype = 'Insert'  
