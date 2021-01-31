@@ -1,5 +1,5 @@
 CREATE PROCEDURE AddUpdateDeleteSystemAdmin /**/ (
-	Staff_ID int IDENTITY(3031,1) PRIMARY KEY,
+	Staff_ID int,
 	Auth_Password varchar(255),
 	ID_Number int
 		) 
