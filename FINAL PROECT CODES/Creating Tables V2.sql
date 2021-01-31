@@ -11,12 +11,14 @@ CREATE TABLE Attendee (
     Attendee_ID int IDENTITY(2021,1) PRIMARY KEY,
     Business_Reg_No int,
 	Notification_No int,
+	Auth_Password varchar(255),
 	Business_Owner varchar (255)
 );
 
 
 CREATE TABLE SystemAdmin (
     Staff_ID int IDENTITY(3031,1) PRIMARY KEY,
+	Auth_Password varchar(255),
 	ID_Number int
 );
 
@@ -55,8 +57,7 @@ CREATE TABLE Registration (
 );
 
 CREATE TABLE Authentication_ (
-    Auth_ID int IDENTITY(8081,1) PRIMARY KEY,
-    Auth_Password varchar(255),
+    Auth_Password varchar(255) PRIMARY KEY,
 	Attendee_ID int,
     Staff_ID int
 );
