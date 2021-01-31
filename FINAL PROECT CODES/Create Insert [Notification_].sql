@@ -1,5 +1,5 @@
 CREATE PROCEDURE AddUpdateDeleteNotification /**/(
-    	@notification_no int,
+    		@notification_no int,
 		@notification_msg varchar (255),
 		@staff_id int,
 		@attendee_id int
