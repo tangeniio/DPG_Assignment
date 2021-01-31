@@ -1,8 +1,8 @@
 CREATE PROCEDURE AddUpdateDeleteSystemAdmin /**/ (
 	@staff_id int,
 	@auth_password varchar(255),
-	@id_number int
-		) 
+	@id_number int,
+	@statementtype NVARCHAR(20) = '')
 AS  
   BEGIN  
       IF @statementtype = 'Insert'  
