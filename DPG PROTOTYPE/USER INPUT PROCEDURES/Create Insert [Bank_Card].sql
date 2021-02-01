@@ -1,8 +1,8 @@
 CREATE PROCEDURE AddUpdateDeleteBankCard/**/ (
-	@bank_card_number int,
+	    @bank_card_number int,
         @cvv_code int,
-        @attendee_id int
-	@statementtype NVARCHAR(20) = '') 
+        @attendee_id int,
+	    @statementtype NVARCHAR(20) = '') 
 
 AS  
   BEGIN  
@@ -28,8 +28,8 @@ AS
         BEGIN  
             UPDATE Bank_Card 
             SET Bank_Card_Number = @bank_card_number,
-		Cvv_Code = @ccv_code,
-		Attendee_ID = @attendee_id
+		        Cvv_Code = @cvv_code
+
 				 
             WHERE  Bank_Card_Number = @bank_card_number
         END  
