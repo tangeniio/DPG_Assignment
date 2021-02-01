@@ -10,7 +10,6 @@ AS
       IF @statementtype = 'Insert'  
         BEGIN  
             INSERT INTO Attendee  (
-					Attendee_ID,
 					Business_Reg_No,
 					Notification_No,
 					Auth_Password,
@@ -35,8 +34,7 @@ AS
       IF @Statementtype = 'Update'  
         BEGIN  
             UPDATE Attendee  
-            SET  Attendee_ID = @attendee_ID,
-				Business_Reg_No = @business_Reg_No,
+            SET Business_Reg_No = @business_Reg_No,
 				Notification_No = @notification_No,
 				Auth_Password = @auth_Password,
 				Business_Owner = @business_Owner
