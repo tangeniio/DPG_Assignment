@@ -1,6 +1,6 @@
 CREATE TABLE Person (
-    ID_Number int IDENTITY(1011,1) PRIMARY KEY,
-    Full_Name varchar(255),
+    ID_Number int IDENTITY(1011,1) PRIMARY KEY, /*IDENTITY INCREMENTS EACH ID NUMBER BY ONE*/
+    Full_Name varchar(255),			/*AUTOMATICALLY GENERATING THE ID NUMBER*/
     Email varchar(255),
 	Cell_No int,
 	Date_Of_Birth date,
