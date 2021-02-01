@@ -1,0 +1,368 @@
+ body {
+    background-image: linear-gradient(to right bottom, #eeeded, #f0efef, #f1f1f1, #f3f3f3, #f5f5f5, #f7f7f7, #f8f8f8, #fafafa, #fbfbfb, #fcfdfc, #fefefe, #ffffff);
+    color: #000305;
+    font-size: 87.5%; 
+    font-family: Arial, 'Lucide Sans Unicode';
+    line-height: 1.5;
+    text-align: left;    
+}   
+
+
+
+.container{
+  width:80%;
+  margin:auto;                       /*margin auto allows content such as images not to start at the beginning of the page but in the middle also makes it look clean and neat*/
+  overflow:hidden;                  /*this sets an image or content if to be hidden if they go outside of a div (that means it wont show a scroll bar at the bottom of the page,makes it look neat)*/
+}
+#2B2F43
+ul{
+  margin:0;                        
+  padding:0;                       
+}
+
+.dark{
+  padding:15px;
+  background:#2B2F43;
+  color:#fff;
+  margin-top:10px;
+  margin-bottom:10px; 
+}
+
+header{
+  background:#000000;              
+  color:#fff;                      
+  padding-top:30px;                
+  min-height:70px;                 
+  border-bottom:#ffffff 3px solid; 
+}
+
+header a{
+  color:#fff;                        
+  text-decoration:none;             
+  text-transform:uppercase;         
+  font-size:16px;
+}
+
+
+header li{
+  float:left;                           
+  display:inline;
+  padding: 0 20px 0 20px;         
+  
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;  
+}
+
+header nav{
+  float:right;
+  margin-top:15px;
+}
+
+header .highlight, header .current a{
+  color:#ffffff;
+  font-weight:bold;
+}
+
+header .highlight1{
+  color:#687480;         
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#ccc;
+  font-weight:bold;
+}
+
+/*showcase style*/
+
+#showcase{
+  min-height:400px;
+  width:auto;
+  background:url("helena-lopes-UZe35tk5UoA-unsplash.jpg");
+  background-size:cover;                        
+  background-position:center;                   
+  text-align:center;
+  color:#ffffff;                                   /*this changes the color of text to white*/
+}
+
+#showcase h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#showcase p{
+  font-size:20px;
+}
+
+
+/*rectangle boxes*/
+#rectanglebox{
+  height:55px;
+  min-width:auto;
+  background:#35424a;
+}
+
+/*boxes*/
+#boxes{
+  margin-top:20px;
+  
+}
+
+#boxes .box{
+  float:left;
+  text-align:center;
+  width:30%;
+  padding:10px ;
+  
+} 
+
+#boxes .box img{
+  width:102%                      
+}
+
+
+a {                                     
+    text-decoration: none;
+}
+
+a:link, a:visited { 
+    color: #687480;                                    
+} 
+
+a:hover, a:active {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+
+}
+ 
+ ol.contactinfo {list-style-type:upper-roman;}   /* contact page numbering changed to roman*/
+ 
+img {                               
+      position: relative;                /* gallary images are made rounded with border radius*/
+      width: 250px;
+	  border-radius:50px;
+    }
+	
+
+	  
+img .caption {                             /* gallary Caption for images*/
+      position: absolute;   
+      width: 283px;
+      height: 50px;
+      bottom: 0px;
+      left: 0px;
+      color: #ffffff;
+      background: grey;
+      text-align:center;
+      opacity:0.7;
+    }	  
+	
+ 	
+	/*table caption*/
+.table caption { caption-side: bottom; }    
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;                  /*table width 100%*/
+}
+
+table td, #table th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+table tr:nth-child(odd){background-color: #dddddd;}  /*zebra striped table color white and grey*/
+
+table tr:hover {background-color: #dddddd;}          /*row is able to hover with a color grey*/
+
+table tr { height: 15px; }                           /*the table cell height has been to 15px using tr*/
+
+table th {
+  padding-top: 8px;
+  padding-bottom: 8px;           /*table padding 8%*/ 
+  text-align: left;              /*text  aligned to the left*/
+  background-color: #000000;     /*table heading color set as orange*/
+  color: white;
+}
+
+/*registration css*/ 
+input[type=text], input[type=password], input[type=email], input[type=date]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fefaf1;
+}
+
+input[type=address]{
+  width: 950px;
+  height:40px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[list=Cultural_Group]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fefaf1;
+}
+
+input[list=Cultural_Group]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fefaf1;
+}
+
+
+select-selected {
+  background-color: yellow;
+}
+
+select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.body {
+    margin: 0 auto; 
+    width: 100%;   
+    clear: both;
+}
+
+
+
+.mainContent {
+    line-height: 25px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;	 
+}
+
+.content {
+    width: 70%;
+    float: left; 
+}
+
+.topcontent {
+    background-color: #FFF;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 3%	 5%;
+    margin-top: 2%;
+    width: 130%;
+} 
+
+.mainpagetopcontent {
+    background-color: #FFF;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 3%	 5%;
+    margin-top: 2%;
+} 
+
+
+
+
+
+ 
+footer{
+  padding:20px;
+  margin-top:20px;
+  text-align:center;
+  color:#fff;
+  background-image: linear-gradient(to right bottom, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000);
+}
+
+@media(max-width: 768px)
+{
+    .body { 
+        width: 90%;
+        font-size: 95%;
+    }
+    
+    
+   .mainheader img {
+        width: 100%;
+    }
+     
+    
+    .mainheader nav {
+        height: 120px;   
+    }
+
+   .mainheader nav ul {
+        padding-left: 0; 
+    }
+
+    .mainheader nav ul li {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .mainheader nav a:link, .mainheader nav a:visited {
+        padding: 10px 25px;
+        height: 20px; 
+        display: block;
+    }
+  
+   .content {
+        width: 100%;
+        margin-top: 2%; 
+    }
+	
+
+} 
+
+

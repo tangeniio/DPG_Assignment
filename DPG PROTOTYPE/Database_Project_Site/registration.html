@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+	
+<head>
+	<title>Real Coffee</title>
+	<meta charset-"utf-8" />
+	
+	<link rel="stylesheet" href="style.css" type="text/css"/   > 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script type="text/javascript" src="myScript.js"> </script> <!--javascript external link -->
+</head>	
+
+<body class="body">
+
+		<header class="mainheader">
+		
+		 <div class="container"> 
+		  
+		  <div id="branding">
+			<h1><span class="highlight">Star/Events</span><span class="highlight1">Booking</span></h1>            <!--span highlights the word Rolands only-->
+		  </div>
+		
+		
+		<nav><ul> 
+			<li><a href="home.html">Home</a></li>
+			<li><a href="Programme.html">Events</a></li>
+			<li><a href="Login.html">Login</a></li>
+			<li class="active"><a href="registration.html">Register</a></li>
+			<li><a href="contact.html">Contact</a></li>
+
+		</ul></nav>
+		</div>
+		
+		<center>
+		
+		
+		<center><h2>Become A Member</h2></center>
+		<!--registration form has the name myform and id of myform-->
+		
+		<!--action is mailto this is the email address to send the information to-->
+		<form id="myform" action="mailto:realcoffee@mail.com" method="post" name="myform" enctype="text/plain">
+  
+
+  <div class="container">
+  
+     <!--element first Name has the name First_name	and id First_name-->
+    FUll Name</b>
+    <input id="First_name"  type="text" placeholder="Enter your Full Name" name="First_name" required>
+	</br>
+	</br>
+	
+	<!--element Last Name has the name Last_name and id Last_name-->
+	Username Name</b></label>
+	
+    <input id="Last_name" type="text" placeholder="Enter your Username" name="Last_name" required>
+	</br>
+	</br>
+
+	<!--element Last Name has the name Last_name and id Last_name-->
+	Password</b></label>
+	
+    <input id="Last_name" type="password" placeholder="Enter your Password" name="Last_name" required>
+	</br>
+	</br>
+	<!--element email has the name email and id email-->
+    Email</b>
+    <input id="email" type="email" placeholder="Enter your Email" name="email" required>
+    </br>
+	</br>
+	
+	<!--element Last Name has the name Last_name and id Last_name-->
+	Cell Number</b></label>
+	
+	<input id="Last_name" type="number" placeholder="Enter your Number" name="Last_name" required>
+	</br>
+	</br>
+
+	<!--element Last Name has the name Last_name and id Last_name-->
+	Date Of Birth</b></label>
+	
+    <input id="Last_name" type="date" placeholder="Enter your Date Of Birth" name="Last_name" required>
+	</br>
+	</br>
+
+	<!--element Last Name has the name Last_name and id Last_name-->
+	Physical Address</b></label>
+	
+    <input id="Last_name" type="text" placeholder="Enter your Address" name="Last_name" required>
+	</br>
+	</br>
+
+	
+	
+	
+    <button type="submit" onSubmit="myFucntion()">Submit</button>    <!--calling myFucntion in submit button using on submit-->
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+	
+  
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button> 
+  </div>
+</form>
+
+
+<script>
+
+<!-- when my function is processed the information goes to the email ronaldsangunji@gmail in the action method -->
+
+function myFunction() {          <!--the name of the function used to process and get information entered by user is called myFunction-->
+
+var x = document.getElementById("myForm").action;             <!--using getElementById to get values entered by user-->
+ 
+ }
+ 
+</script>
+
+
+</center>
+		
+		    <footer class="mainfooter">
+	    	<center><p>StarEventsBooking, Copyright &copy; 2021<center>	
+            </footer>  		
+
+
+</body>
+</html>
