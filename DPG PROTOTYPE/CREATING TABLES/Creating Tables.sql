@@ -71,7 +71,7 @@ CREATE TABLE Transaction_ (
 );
 
 CREATE TABLE Bank_Card (
-    Bank_Card_Number int IDENTITY(1001,1) PRIMARY KEY,
+    Bank_Card_Number int PRIMARY KEY,
     Cvv_Code int,
     Attendee_ID int
 );
